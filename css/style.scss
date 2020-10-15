@@ -1,3 +1,44 @@
-body{
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+html{
+    font-size: 0.625vw;
+}
+
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
+    height: 34rem;
+    background: url('../img/architecture.jpeg');
+    background-size: cover;
+    filter: blur(8px) brightness(0.75);
+    z-index: -1;
+    background-position-y: 60%;
+    
+
+}
+
+.container{
+    margin: 0 23rem;
+    & .headers{
+        margin-top: 10rem;
+        border-bottom: 3px solid rgba(238, 238, 238, 0.3);
+        & h1{
+            text-transform: uppercase;
+            font: 500 2.4rem Roboto;
+            color: white;
+            letter-spacing: 2px;
+            margin-bottom: 4.3rem;
+        }
+        & h2{
+            font: 500 1.6rem Roboto;
+            color: white;
+            text-transform: uppercase;
+            margin-bottom: 1.3rem;
+        }
+    }
 }
