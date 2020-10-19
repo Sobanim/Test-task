@@ -1,60 +1,72 @@
-*{
+* {
     padding: 0;
     margin: 0;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
 }
-html{
+html {
     font-size: 0.625vw;
 }
 
-header{
+header {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 34rem;
-    background: url('../img/architecture.jpeg');
+    background: url("../img/architecture.jpeg");
     background-size: cover;
     filter: blur(8px) brightness(0.7);
     z-index: -1;
     background-position-y: 60%;
-    
-
 }
 
-.container{
+.container {
     margin: 0 23rem;
-    & .headers{
+    & .headers {
         margin-top: 10rem;
         border-bottom: 3px solid rgba(238, 238, 238, 0.3);
-        & h1{
+        & h1 {
             text-transform: uppercase;
             font: 400 2.4rem Roboto;
             color: white;
             letter-spacing: 2px;
             margin-bottom: 4.3rem;
         }
-        & h2{
+        & h2 {
             font: 400 1.6rem Roboto;
             color: white;
             text-transform: uppercase;
             margin-bottom: 1.3rem;
         }
     }
-    & .categories{
-        margin-top: 3.2rem;
+    & .categories {
         display: flex;
-        // justify-content: space-between;
         flex-wrap: wrap;
-        &__categoria{
-            flex: 25%;
-            & img{
-                max-width: 26.5rem;
+        margin: 3.2rem -1.4rem 0;
+        &__categoria {
+            flex: 0 calc(25% - 2.8rem);
+            padding: 0 1.4rem;
+            z-index: 3;
+            position: relative;
+            & img {
+                width: 100%;
+            }
+            & .categoria__text {
+                position: absolute;
+                left: 50%;
+                bottom: -1px;
+                transform: translate(-50%, 0);
+                width: calc(100% - 2.6rem);
+                font-size: 1.6rem;
+                background-color: white;
+                color: #555;
+                padding: 2rem 0;
+                text-align: center;
             }
         }
     }
 
-    & footer p{
+    & footer p {
         font-size: 1.4rem;
         color: #aaa;
     }
