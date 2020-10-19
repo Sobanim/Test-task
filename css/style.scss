@@ -15,7 +15,7 @@ header{
     height: 34rem;
     background: url('../img/architecture.jpeg');
     background-size: cover;
-    filter: blur(8px) brightness(0.75);
+    filter: blur(8px) brightness(0.7);
     z-index: -1;
     background-position-y: 60%;
     
@@ -29,16 +29,33 @@ header{
         border-bottom: 3px solid rgba(238, 238, 238, 0.3);
         & h1{
             text-transform: uppercase;
-            font: 500 2.4rem Roboto;
+            font: 400 2.4rem Roboto;
             color: white;
             letter-spacing: 2px;
             margin-bottom: 4.3rem;
         }
         & h2{
-            font: 500 1.6rem Roboto;
+            font: 400 1.6rem Roboto;
             color: white;
             text-transform: uppercase;
             margin-bottom: 1.3rem;
         }
+    }
+    & .categories{
+        margin-top: 3.2rem;
+        display: flex;
+        // justify-content: space-between;
+        flex-wrap: wrap;
+        &__categoria{
+            flex: 25%;
+            & img{
+                max-width: 26.5rem;
+            }
+        }
+    }
+
+    & footer p{
+        font-size: 1.4rem;
+        color: #aaa;
     }
 }
