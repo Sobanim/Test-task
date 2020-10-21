@@ -39,29 +39,65 @@ header {
             margin-bottom: 1.3rem;
         }
     }
-    & .categories {
+    .categories {
         display: flex;
         flex-wrap: wrap;
-        margin: 3.2rem -1.4rem 0;
-        &__categoria {
-            flex: 0 calc(25% - 2.8rem);
-            padding: 0 1.4rem;
-            z-index: 3;
+        margin-left: -1.4rem;
+        margin-right: -1.4rem;
+        .categoria {
             position: relative;
+            flex: 0 1 calc(25% - 2.8rem);
+            // padding-bottom: 1rem;
+            margin: 3.2rem 1.4rem 2.8rem 1.4rem;
+            overflow: hidden;
+            box-shadow: 0 5px 10px -5px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            height: 21.6rem;
+            transition: .2s ease all;
+            .categoria__content {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: 27%;
+                width: 100%;
+                background-color: white;
+                text-align: center;
+                // padding-bottom: 2rem;
+                transition: 0.2s ease all;
+            }
+            .categoria__title {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 1.6rem;
+                font-weight: 500;
+                color: #555;
+                text-transform: uppercase;
+            }
+            .categoria__text {
+                transition: 0.2s ease all;
+                opacity: 0;
+                height: 0;
+                font-size: 1.6rem;
+                color: #aaa;
+            }
             & img {
                 width: 100%;
             }
-            & .categoria__text {
-                position: absolute;
-                left: 50%;
-                bottom: -1px;
-                transform: translate(-50%, 0);
-                width: calc(100% - 2.6rem);
-                font-size: 1.6rem;
-                background-color: white;
-                color: #555;
-                padding: 2rem 0;
-                text-align: center;
+            &:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 15px 20px -5px rgba(0, 0, 0, 0.2);
+                .categoria__content {
+                    height: 40%;
+                }
+                .categoria__text {
+                    opacity: 1;
+                    height: auto;
+                }
             }
         }
     }
