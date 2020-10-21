@@ -99,11 +99,45 @@ header {
                     height: auto;
                 }
             }
+
         }
     }
 
     & footer p {
         font-size: 1.4rem;
         color: #aaa;
+    }
+}
+
+@media (max-width: 767px){
+    html{
+        font-size: 1.525vw;
+    }
+    header{
+        filter: blur(3px) brightness(0.7);
+        height: 35rem;
+        background-position: center;
+    }
+    .container{
+        margin: 0 5rem;
+        .headers{
+            margin-top: 13rem;
+            border-bottom: 2px solid rgba(238, 238, 238, 0.3);
+            h1{
+                font-size: 3.5rem;
+                margin-bottom: 2rem;
+            }
+            h2{
+                font-size: 2.1rem;
+            }
+        }
+        .categories{
+            .categoria{
+                flex: 0 1 calc(50% - 2.8rem);
+                .categoria__text{
+                    opacity: 1;
+                }
+            }
+        }
     }
 }
